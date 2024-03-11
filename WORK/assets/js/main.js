@@ -98,7 +98,7 @@ var video = document.getElementById('myVideo');
     if (isMobile) {
       // 手機顯示時，顯示播放按鈕，隱藏進度條
       video.setAttribute('controls', 'true');
-      video.removeAttribute('controlslist');
+   
     } else {
       // 電腦上自動播放
       video.play();
