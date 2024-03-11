@@ -36,7 +36,7 @@
 					</header>
 
 					<div class="video-container">
-						<video id="myVideo" autoplay muted loop>
+						<video id="myVideo" controls autoplay muted loop>
 						  <source src="16.webm" type="video/webm">
 						  <source src="images/11.mp4" type="video/mp4">
 						  Your browser does not support the video tag.
@@ -52,6 +52,13 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+		<script>
+		  // 檢查是否為手機或平板設備
+		  if (window.matchMedia("(max-width: 768px)").matches) {
+		    var video = document.getElementById('myVideo');
+		    video.removeAttribute('autoplay'); // 移除自動播放屬性
+		  }
+                 </script>
 
 	</body>
 </html>
