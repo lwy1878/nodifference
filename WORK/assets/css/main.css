@@ -4083,8 +4083,7 @@ input, select, textarea {
   }
 		
   .slideshow-container {
-	background-color:#000000;
-	
+	background-image: url('images/BB.jpg');
 	position: relative;
 	max-width: 100%;
 	overflow: hidden;
