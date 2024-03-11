@@ -89,15 +89,21 @@
 		  slides[slideIndex - 1].style.display = "block";
 		  setTimeout(showSlides, 2000); // Change image every 2 seconds
 		}
-document.addEventListener('DOMContentLoaded', function() {
- window.addEventListener('DOMContentLoaded', function() {
-    var video = document.getElementById('myVideo');
-    video.controls = false;
-    video.play();
-    video.muted = true;
-  });
+var video = document.getElementById('myVideo');
 
-});
+  window.addEventListener('DOMContentLoaded', function() {
+    // 判斷是否為手機設備
+    var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+    if (isMobile) {
+      // 手機顯示時，顯示播放按鈕，隱藏進度條
+      video.setAttribute('controls', 'true');
+      video.removeAttribute('controlslist');
+    } else {
+      // 電腦上自動播放
+      video.play();
+    }
+  });
 	
 
 })(jQuery);
