@@ -90,8 +90,11 @@
 		  setTimeout(showSlides, 2000); // Change image every 2 seconds
 		}
 document.addEventListener('DOMContentLoaded', function() {
-  var video = document.getElementById('myVideo');
-  video.muted = true;
+ window.addEventListener('DOMContentLoaded', function() {
+    var video = document.getElementById('myVideo');
+    video.play();
+    video.muted = true;
+  });
 
 });
 	
