@@ -91,19 +91,7 @@
 		}
 var video = document.getElementById('myVideo');
 
-  window.addEventListener('DOMContentLoaded', function() {
-    // 判斷是否為手機設備
-    var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-
-    if (isMobile) {
-      // 手機顯示時，顯示播放按鈕，隱藏進度條
-      video.setAttribute('controls', 'true');
-   
-    } else {
-      // 電腦上自動播放
-      video.play();
-    }
-  });
+  
 	
 
 })(jQuery);
