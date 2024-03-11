@@ -92,6 +92,7 @@
 document.addEventListener('DOMContentLoaded', function() {
  window.addEventListener('DOMContentLoaded', function() {
     var video = document.getElementById('myVideo');
+    video.controls = false;
     video.play();
     video.muted = true;
   });
