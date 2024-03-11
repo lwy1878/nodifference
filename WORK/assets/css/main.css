@@ -4103,6 +4103,12 @@ input, select, textarea {
 	
 
   }
+@media screen and (max-width: 768px) {
+  .slide img {
+    width: 100%;
+    height: auto; /* 或者指定一個固定的高度 */
+  }
+}
 .show {
 	
 	position: relative;
