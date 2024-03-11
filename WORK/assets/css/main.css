@@ -4061,25 +4061,34 @@ input, select, textarea {
 		.About h2 {
 		text-align: center;
 		}
-		.About p {
+			.About p {
 			text-align: center;
-			font-size: 2vw;
+			font-size: 1em;
 			padding: 10%;
 		}
 
 	@media screen and (max-width: 768px) {
-	.About {
-	  font-size: 3em; 
+	.About p{
+	  font-size: 3.5vw; 
 	  padding: 10px;
 	}
+	.About h1{
+		font-size: 9vw; 
+		padding: 10px;
+	  }
   }
   
  
   @media screen and (min-width: 769px) {
-	.About {
-	  font-size: 5em;
-	  padding: 20px; 
+	.About p{
+	  font-size: 3;
+	  padding: 10px; 
 	}
+	.About h1{
+		font-size: 3em;
+		padding: 10px; 
+	  }
+
   }
 		
   .slideshow-container {
