@@ -36,8 +36,7 @@
 					</header>
 
 					<div class="video-container">
-						<video id="myVideo" controls autoplay muted loop>
-						  <source src="16.webm" type="video/webm">
+						<video id="myVideo"  muted loop>
 						  <source src="images/11.mp4" type="video/mp4">
 						  Your browser does not support the video tag.
 						</video>
@@ -53,12 +52,15 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 		<script>
-		  // 檢查是否為手機或平板設備
-		  if (window.matchMedia("(min-width: 768px)").matches) {
+		 window.addEventListener('DOMContentLoaded', function() {
 		    var video = document.getElementById('myVideo');
-		    
-		    video.removeAttribute('controls'); 
-		  }
+		    // 檢查視窗寬度，如果大於768px則自動播放，否則顯示控制按鈕
+		    if (window.innerWidth >= 768) {
+		      video.setAttribute('autoplay', true);
+		    } else {
+		      video.setAttribute('controls', true);
+		    }
+ 		 });
                  </script>
 
 	</body>
