@@ -89,5 +89,16 @@
 		  slides[slideIndex - 1].style.display = "block";
 		  setTimeout(showSlides, 2000); // Change image every 2 seconds
 		}
+	window.addEventListener('scroll', function() {
+  var video = document.getElementById('myVideo');
+  var videoOffset = video.offsetTop;
+  var windowHeight = window.innerHeight;
+  
+  // 如果視頻在窗口中可見，則播放
+  if (videoOffset < (window.scrollY + windowHeight) && (videoOffset + video.offsetHeight) > window.scrollY) {
+    video.play();
+  }
+});
+	
 
 })(jQuery);
